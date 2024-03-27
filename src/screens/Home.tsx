@@ -1,7 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { MapPin, CaretDown, BellRinging } from 'phosphor-react-native';
+import { Feather, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
+import { Image } from '@rneui/themed';
+
 
 export function Home(){
     return(
@@ -9,15 +11,23 @@ export function Home(){
             <View style = {styles.content}>
                 <View style = {styles.header}>
                     <View style = {styles.headerLeft}>
-                        <MapPin color = "#fff" size={25}/>
+                        <Feather name="map-pin" size={24} color="white" />
                         <Text style = {styles.headerLeftText}>Recife</Text>
-                        <CaretDown color="#fff" size={25}/>
+                        <AntDesign name="down" size={18} color="white" />
                     </View>
-                    <BellRinging color="#fff" size={25}/>
+                    <MaterialCommunityIcons name="bell-ring-outline" size={26} color="white" />
                 </View>
 
                 <View style = {styles.principal}>
-                    <Image source={{uri: 'https://assets.hgbrasil.com/weather/icons/conditions/clear_day.svg'}}/>
+                    
+                    <View>
+                        <Text>28º</Text>
+                        <Text>Precipitation</Text>
+                        <Text>Max.:31º Min.:28º</Text>
+                    </View>
+                    <View>
+                        
+                    </View>
                 </View>
             </View>
 
@@ -49,6 +59,6 @@ const styles = StyleSheet.create({
 
 
     principal:{
-
+        alignItems: 'center',
     }
 })
