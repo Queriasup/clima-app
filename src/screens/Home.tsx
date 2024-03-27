@@ -6,6 +6,8 @@ import {
 } from '@expo/vector-icons'
 import { LinearGradient } from 'expo-linear-gradient'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import CardBox from '../components/cardbox/CardBox'
+import CardBoxdayNight from '../components/cardbox/CardBoxDayNight'
 
 export function Home() {
   return (
@@ -46,11 +48,12 @@ export function Home() {
             <Text style={styles.principalText}>Precipitation</Text>
             <Text style={styles.principalText}>Max.: 31º Min.: 28º</Text>
           </View>
-          <cardBox
+          <CardBox
             wheater={'sunny'}
             temperatura={'32'}
             hora={'01:30'}
           />
+          <CardBoxdayNight dawn={'05:00'} sunset={'18:00'}/>
         </View>
       </ScrollView>
     </LinearGradient>

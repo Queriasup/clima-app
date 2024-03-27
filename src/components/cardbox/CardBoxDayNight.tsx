@@ -1,27 +1,22 @@
-import { Feather, FontAwesome6 } from '@expo/vector-icons';
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface CardBoxProps {
-  wheater: string
-  temperatura: string
-  hora: string
+  rise: string
+  dawn: string
 }
 
-const CardBox: React.FC<CardBoxProps> = ({ wheater, temperatura, hora }) => {
+const CardBoxdayNight: React.FC<CardBoxProps> = ({ dawn, sunset}) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerIconeTexto}>
-        <Feather name="cloud-rain" size={16} color="white" />
-        <Text style={styles.text}>{wheater}</Text>
+        <Feather name="sun" size={16} color="white" />
+        <Text style={styles.text}>{dawn}</Text>
       </View>
       <View style={styles.containerIconeTexto}>
-        <FontAwesome6 name="temperature-half" size={16} color="white" />
-        <Text style={styles.text}>{temperatura}</Text>
-      </View>
-      <View style={styles.containerIconeTexto}>
-        <Feather name="wind" size={16} color="white" />
-        <Text style={styles.text}>{hora}</Text>
+        <MaterialCommunityIcons name="weather-sunset" size={24} color="white" />
+        <Text style={styles.text}>{sunset}</Text>
       </View>
     </View>
   )
@@ -49,4 +44,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default CardBox
+export default CardBoxdayNight
