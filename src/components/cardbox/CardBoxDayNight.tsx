@@ -3,8 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface CardBoxProps {
-  rise: string
   dawn: string
+  sunset: string
 }
 
 const CardBoxdayNight: React.FC<CardBoxProps> = ({ dawn, sunset}) => {
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems:'center',
     borderRadius: 50,
-    color: 'white',
   },
   containerIconeTexto:{
     flexDirection: 'row',

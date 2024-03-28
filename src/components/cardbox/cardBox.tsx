@@ -3,25 +3,25 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface CardBoxProps {
-  wheater: string
-  temperatura: string
-  hora: string
+  weather: string
+  humidity: string
+  windSpeed: string
 }
 
-const CardBox: React.FC<CardBoxProps> = ({ wheater, temperatura, hora }) => {
+const CardBox: React.FC<CardBoxProps> = ({ weather, humidity, windSpeed }) => {
   return (
     <View style={styles.container}>
       <View style={styles.containerIconeTexto}>
         <Feather name="cloud-rain" size={16} color="white" />
-        <Text style={styles.text}>{wheater}</Text>
+        <Text style={styles.text}>{weather}</Text>
       </View>
       <View style={styles.containerIconeTexto}>
         <FontAwesome6 name="temperature-half" size={16} color="white" />
-        <Text style={styles.text}>{temperatura}</Text>
+        <Text style={styles.text}>{humidity}</Text>
       </View>
       <View style={styles.containerIconeTexto}>
         <Feather name="wind" size={16} color="white" />
-        <Text style={styles.text}>{hora}</Text>
+        <Text style={styles.text}>{windSpeed}</Text>
       </View>
     </View>
   )
